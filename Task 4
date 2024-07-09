@@ -1,0 +1,30 @@
+select * from customer
+
+	--Questions--
+
+1) select avg(age) from customer where country = 'united states' or city = 'nagpur' 
+
+2) select count(customer_name)  from customer where age between '20' and '50'
+
+3) select sum(age) from customer where customer_id = '18715'
+
+select * from sales
+
+4) select sum(sales), avg(sales) from sales where order_line in (2,3,4,5,6)
+
+5) select min(sales), max(sales) from sales where order_line in (2,3,4,5,6) limit 10 
+
+6) select quantity from sales order by quantity DESC
+
+7) select avg(sales),sum(sales) from sales where product_id = 'OFF-LA-10000240'
+
+8) select avg(sales),sum(sales),min(sales),max(sales),count(sales) from sales 
+	where ship_mode in ('First class', 'Standard Class')
+
+select * from product
+
+9) select count(product_id) from product where category in ('Furniture','Technology') 
+	and sub_category in ('Chairs')
+
+10) select * from sales where product_id = 'OFF-BI-10004140' and order_line > 4102 
+	order by sales ASC limit 20 
